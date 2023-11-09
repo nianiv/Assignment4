@@ -1,0 +1,266 @@
+<HTML>
+ <head>
+
+<title> Rock Paper Scissors!</title>
+ </head>
+ <style>
+body {
+    display: grid;
+         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+         grid-template-rows: 1fr 1fr 1fr 1fr;
+         gap: 10px;
+
+}
+
+
+
+
+
+.title {
+grid-row-start: 1;
+grid-row-end: 2;
+grid-column-start: 1;
+grid-column-end: 4;    
+}
+
+.messagecenter {
+grid-row-start: 2;
+grid-row-end: 3;
+grid-column-start: 1;
+grid-column-end: 4;    
+}
+
+.userpicture {
+grid-row-start: 3;
+grid-row-end: 4;
+grid-column-start: 1;
+grid-column-end: 2;    
+}
+
+.computerpicture {
+grid-row-start: 3;
+grid-row-end: 4; 
+grid-column-start: 3;
+grid-column-end: 4;   
+}
+
+
+.rock {
+grid-row-start: 5;
+grid-row-end: 6;
+grid-column-start: 1;
+grid-column-end: 2;  
+text-align: center;  
+}
+
+.paper {
+grid-row-start: 5;
+grid-row-end: 6;
+grid-column-start: 2;
+grid-column-end: 3;
+text-align: center;     
+}
+
+.scissor {
+grid-row-start: 5;
+grid-row-end: 6;
+grid-column-start: 3;
+grid-column-end: 4;
+text-align: center;  
+}
+</style>
+<script>
+var a;
+var b;
+var c;
+
+
+function rock() {
+document.getElementById("userimage").src = "rock.png";
+
+a = (Math.floor(Math.random() * 3)+1);
+
+if (a == 1)  
+    {document.getElementById("computerimage").src = "rock.png";
+    document.getElementById("messagecenter").innerHTMl = "Tie!"; }
+
+    if(a == 2) 
+{document.getElementById("computerimage").src = "paper.png";
+document.getElementById("messagecenter").innerHTML = "You Lose!";}
+
+
+if (a == 3) 
+ {document.getElementById("computerimage").src = "scissor.png";
+ document.getElementById("messagecenter").innerHTML = "You Win!";}
+
+
+}
+
+
+function paper() {
+document.getElementById("userimage").src = "paper.png";
+
+a = (Math.floor(Math.random() *  3)+1);
+
+if (a == 1) 
+    {document.getElementById("computerimage").src = "rock.png";
+    document.getElementById("messagecenter").innerHTML = "You win!"; }
+
+    if(a == 2) 
+{document.getElementById("computerimage").src = "paper.png";
+document.getElementById("messagecenter").innerHTML = "Tie!";}
+
+if (a == 3) 
+ {document.getElementById("computerimage").src = "scissor.png";
+ document.getElementById("messagecenter").innerHTML = "You Lose!";}
+
+
+
+}
+
+
+
+
+
+function scissor() {
+document.getElementById("userimage").src = "scissor.png";
+
+a = (Math.floor(Math.random() * 3));
+
+if (a == 1) 
+    {document.getElementById("computerimage").src = "rock.png";
+    document.getElementById("messagecenter").innerHTML = "You Lose!";}
+ 
+    if(a == 2) 
+{document.getElementById("computerimage").src = "paper.png";
+document.getElementById("messagecenter").innerHTML = "You Win!";}
+
+if (a == 3) 
+ {document.getElementById("computerimage").src = "scissor.png";
+ document.getElementById("messgaecenter").innerHTML = "Tie!";}
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+<body>
+
+<p id = "messagecenter"></p> 
+
+
+
+    <div class = "title">  Rock Paper Scissors!!  </div>
+
+
+
+
+
+<div class = "controlcenter"> Click rock, paper, or scissors and v.s the computer! </div>
+
+
+
+<div class = "userpicture"> 
+<img src = "userpicture.png" id = "userimage">
+
+
+
+
+
+</div>    
+
+
+<div class = "computerpicture"> 
+<img src = "computerpicture.png" id = "computerimage">
+
+</div>
+
+
+<div class = "usercounter"> </div>
+
+
+<div class = "computercounter"> </div>
+
+
+<div class = "rock"> 
+ <button onclick = "rock()"> Rock </button>     
+
+
+</div>
+
+
+<div class = "paper"> 
+<button onclick = "paper()">  Paper </button>
+
+
+</div>
+
+
+<div class = "scissor"> 
+    
+    <button onclick = "scissor()"> Scissor  </button>    
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+</HTML>
+ 
+ 
+ 
+
+
